@@ -4,8 +4,7 @@
 - [Introduction](#introduction)
 - [Technologies Used](#technologies-used)
 ## Introduction
-It is a personal blog app that list down any blog i've been saved in database and displays it, wheter it is a plaintext or a markdown file.
-
+Blog That displays Markdown files as Blog Posts. SEO friendly, made in next.js and also has tags builtin for easy search, including pagination and in typescript
 Technologies Used
 - Next.js
 - Tailwind
