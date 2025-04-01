@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react'
 
-const PostHeader = ({ title, date, slug, tags }: { title: string; date: string; slug: string, tags: string[] }) => {
+const PostHeader = ({ title, date, slug }: { title: string; date: string; slug: string }) => {
 
   return (
     <div className=''>
