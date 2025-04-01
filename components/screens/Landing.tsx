@@ -28,14 +28,14 @@ const Landing = async () => {
         <p className='text-neutral-400 py-4 px-2 text-md sm:text-xl'>A collection of guides and tutorials on web development and devops.</p>
       </div>
       <div className='mt-10'>
-        {posts.map(({ title, date, slug, tags }) => (
+        {posts.map(({ title, date, slug }) => (
           //<div key={title} >
           //
           //  <h1>{title}</h1>
           //  <p>{date}</p>
           //
           //</div>
-          <PostHeader key={slug} title={title} date={date} slug={slug} tags={tags} />
+          <PostHeader key={slug} title={title} date={date} slug={slug}  />
         ))}
       </div>
     </div>
