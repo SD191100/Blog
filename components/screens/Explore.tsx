@@ -5,12 +5,8 @@ import Tag from "../ui/Tag";
 const Explore = async () => {
   const tags = await getAllTags();
   const cheatSheet = await getPostByTag("cheatsheet")
-  //console.log(tags);
   const totalPosts = await getAllPosts();
   const postCount = totalPosts.length;
-  console.log(cheatSheet)
- 
-
   
   return (
     <div className="container max-w-5xl mx-auto min-h-screen py-6 px-3">

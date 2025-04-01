@@ -2,9 +2,9 @@ import Posts from "@/components/screens/Posts";
 import { getPostBySlug } from "@/lib/Posts";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const { slug } = await params;
+type tParams = Promise<{ slug: string }>;
+export async function generateMetadata(props: { params: tParams }): Promise<Metadata> {
+  const { slug } = await props.params;
   const post = await getPostBySlug(slug);
   if (!post) {
     return {
@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 
-export default async function PostPage({ params }: { params: { slug: string } }) {
-  const { slug } = await params;
+export default async function PostPage(props: { params: tParams }) {
+  const { slug } = await props.params;
   const post = await getPostBySlug(slug);
 
   if (!post) return notFound();

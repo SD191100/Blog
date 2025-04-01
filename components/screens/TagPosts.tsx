@@ -12,13 +12,12 @@ const TagPosts = ({ tag, posts }: { tag: string; posts: PostMetadata[] }) => {
         </p>
       </div>
       <div className="mt-10">
-        {posts.map(({ title, date, slug, tags }) => (
+        {posts.map(({ title, date, slug }) => (
           <PostHeader
             key={slug}
             title={title}
             date={date}
             slug={slug}
-            tags={tags}
           />
         ))}
       </div>
